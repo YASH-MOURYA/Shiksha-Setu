@@ -42,7 +42,7 @@ export default function Home() {
 
           <div className="why-card" data-aos="zoom-in" data-aos-delay="150">
             <h3>Mentor Support</h3>
-            <p>Guidance from mentors inspired by CodeHelp-style teaching.</p>
+            <p>Guidance from mentors </p>
           </div>
 
           <div className="why-card" data-aos="zoom-in" data-aos-delay="300">
@@ -84,7 +84,7 @@ export default function Home() {
       <section className="mentors-section">
         <h2 data-aos="fade-up">Mentors & Contributors</h2>
         <p className="mentors-sub" data-aos="fade-up" data-aos-delay="150">
-          The Shiksha Setu project is built by your team – just like CodeHelp is led by Love Babbar.
+          The Shiksha Setu project is built by our team
         </p>
 
         <div className="mentors-grid">
