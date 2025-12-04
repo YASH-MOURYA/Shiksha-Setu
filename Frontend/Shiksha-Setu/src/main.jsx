@@ -5,12 +5,12 @@ import App from "./App.jsx";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-// Initialize AOS after the app mounts
 function Root() {
   useEffect(() => {
     AOS.init({
       duration: 800, // animation speed
-      once: true,     // animation only once
+      once: true,    // animate only first time
+      offset: 80,
     });
   }, []);
 
