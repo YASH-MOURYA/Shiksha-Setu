@@ -250,3 +250,47 @@
   text-decoration: none;
   display: inline-block;
 }
+
+
+.mentor-card {
+  background: radial-gradient(circle at top, #1a1f3c, #0b1020);
+  border-radius: 20px;
+  padding: 16px;
+  text-align: center;
+  width: 240px;
+
+  display: flex;
+  flex-direction: column;   /* ✅ STACK IMAGE + TEXT */
+  align-items: center;
+
+  overflow: visible;       /* ✅ NOTHING GETS CUT */
+  gap: 12px;               /* ✅ SPACE BETWEEN IMAGE & TEXT */
+}
+
+.mentor-photo {
+  width: 200px;
+  height: 240px;               /* ✅ FIXED HEIGHT TO HOLD FULL IMAGE */
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;        /* ✅ CENTER IMAGE VERTICALLY */
+  justify-content: center;    /* ✅ CENTER IMAGE HORIZONTALLY */
+  background: #000;
+}
+
+
+
+.mentor-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* ✅ FILLS BOX WITHOUT CUTTING FACE */
+  border-radius: 16px;
+  transition: transform 0.3s ease;
+}
+
+
+.mentor-photo:hover img {
+  transform: scale(1.08);
+}
+
+
