@@ -1,7 +1,11 @@
+import { SignUp } from "../Components/Auth/SignUp";
+import { LogIn } from "../Components/Auth/LogIn";
+ 
 export default function Login() {
   return (
-    <div>
-      <h1>Login Page</h1>
+    <div className="">
+      <SignUp></SignUp>
+      <LogIn></LogIn>
     </div>
   );
 }

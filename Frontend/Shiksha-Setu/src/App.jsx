@@ -8,17 +8,13 @@ import Navbar from "./Components/Navbar";
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <Navbar />    {/* Navbar now works */}
-
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/courses" element={<Courses />} />
-        </Routes>
-
-      </BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/courses" element={<Courses />} />
+      </Routes>
     </>
   );
 }
