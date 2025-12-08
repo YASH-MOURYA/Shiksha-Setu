@@ -5,7 +5,7 @@ import "../App.css";
 import Harshit from "../assets/Harshit.jpg";
 import Shristi from "../assets/Shristi.jpg";
 import Pranav from "../assets/Pranav.png";
-
+import Yash from "../assets/Yash.jpg";
 
 
 
@@ -99,9 +99,12 @@ export default function Home() {
 
         <div className="mentors-grid">
           <div className="mentor-card" data-aos="flip-left">
-            <div className="mentor-photo"></div>
+            <div className="mentor-photo" onClick={()=>{
+              setZoomImg(Yash)
+            }}>
+              <img src={Yash} alt ="Yash"/></div>
             <h3>Yash</h3>
-            <p>Project Lead & Backend</p>
+            <p>Project Lead</p>
           </div>
 
           <div className="mentor-card" data-aos="flip-left" data-aos-delay="150">
