@@ -1,0 +1,173 @@
+/* Dark premium gradient background */
+.courses-page {
+  min-height: 100vh;
+  background: linear-gradient(145deg, #0d112b, #121631, #1c1f40);
+  position: relative;
+  padding: 60px 20px;
+  overflow-x: hidden;
+  background-attachment: fixed;
+}
+
+
+/* Floating glowing blobs */
+.bg-circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.2;
+  filter: blur(110px);
+}
+
+.circle1 {
+  width: 260px;
+  height: 260px;
+  background: #6366f1;
+  top: 8%;
+  left: 15%;
+  animation: float 10s infinite alternate;
+}
+
+.circle2 {
+  width: 300px;
+  height: 300px;
+  background: #ec4899;
+  bottom: 12%;
+  right: 16%;
+  animation: float 14s infinite alternate;
+}
+
+.circle3 {
+  width: 200px;
+  height: 200px;
+  background: #22c55e;
+  bottom: 35%;
+  left: 5%;
+  animation: float 12s infinite alternate;
+}
+
+@keyframes float {
+  from { transform: translateY(0px); opacity: 0.2; }
+  to { transform: translateY(-40px); opacity: 0.35; }
+}
+
+/* Gradient pulse strip background */
+.gradient-strip {
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(120deg, #6366f1, #ec4899, #22c55e);
+  background-size: 300%;
+  animation: animateStrip 14s infinite ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@keyframes animateStrip {
+  0% { background-position: 0% }
+  50% { background-position: 100% }
+  100% { background-position: 0% }
+}
+
+/* Hero Section */
+.hero-title {
+  font-size: 46px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  animation: titleFloat 4s infinite ease-in-out;
+}
+@keyframes titleFloat {
+  0%, 100% { transform: translateY(0) }
+  50% { transform: translateY(-6px) }
+}
+
+/* Scroll reveal animation */
+
+.reveal {
+  opacity: 0.3;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Cards */
+.course-card {
+  background: rgba(154, 12, 135, 0.97);
+  border-radius: 18px;
+  padding: 20px;
+  cursor: pointer;
+  box-shadow: 0px 18px 35px rgba(0,0,0,0.26);
+  transition: 0.4s ease;
+  position: relative;
+
+  /* ADD THESE FIXES */
+  width: 90%;
+  max-width: 340px;
+  margin: auto;
+}
+
+
+.course-card:hover {
+  transform: translateY(-9px) scale(1.02);
+  box-shadow: 0px 20px 60px rgba(108,132,255,0.7);
+}
+
+/* Ripple Buttons */
+.rippleBtn {
+  position: relative;
+  overflow: hidden;
+}
+.rippleBtn::after {
+  content: "";
+  position: absolute;
+  transform: scale(0);
+  border-radius: 100%;
+  background: rgba(255,255,255,0.55);
+  animation: ripple 0.5s ease-out;
+}
+@keyframes ripple {
+  to {
+    transform: scale(13);
+    opacity: 0;
+  }
+}
+
+/* CTA Button */
+.explore-cta {
+  background: linear-gradient(120deg, #6366f1, #ec4899);
+  border: none;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 999px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 30px;
+}
+
+/* Course detail button */
+.course-btn {
+  background: linear-gradient(120deg, #6366f1, #4f46e5);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+}
+/* Cards Grid Layout */
+.courses-grid {
+  margin-top: 38px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 26px;
+  justify-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.course-card:hover {
+  box-shadow: 0px 25px 60px rgba(150,160,255,0.55);
+}

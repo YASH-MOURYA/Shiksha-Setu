@@ -1,0 +1,199 @@
+.detail-page {
+  min-height: 100vh;
+  padding: 40px 16px 60px;
+  background: #020617;
+  color: #1c3d7e;
+  position: relative;
+  overflow: hidden;
+}
+
+.detail-bg {
+  position: absolute;
+  inset: -140px;
+  background: radial-gradient(circle at 10% 10%, #4f46e5 0, transparent 45%),
+    radial-gradient(circle at 90% 80%, #f97316 0, transparent 45%);
+  opacity: 0.16;
+  filter: blur(4px);
+  animation: detailGlow 18s ease-in-out infinite alternate;
+  z-index: -1;
+}
+
+@keyframes detailGlow {
+  0% {
+    transform: translateX(-2%) translateY(0);
+  }
+  100% {
+    transform: translateX(4%) translateY(-3%);
+  }
+}
+
+.detail-hero {
+  max-width: 1100px;
+  margin: 0 auto 28px;
+}
+
+.detail-title {
+  font-size: clamp(30px, 4vw, 40px);
+  font-weight: 800;
+  margin: 14px 0 8px;
+}
+
+.detail-subtitle {
+  max-width: 620px;
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+.detail-meta-row {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.detail-pill {
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  font-size: 12px;
+}
+
+/* layout */
+.detail-layout {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
+  gap: 22px;
+}
+
+.detail-main-card {
+  background: rgba(15, 23, 42, 0.9);
+  padding: 20px 20px 22px;
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.75);
+}
+
+.detail-main-card h2 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.detail-list {
+  margin: 4px 0 14px;
+  padding-left: 18px;
+  font-size: 14px;
+  color: #cbd5f5;
+}
+
+.detail-list li {
+  margin-bottom: 4px;
+}
+
+/* timeline */
+.timeline {
+  margin-top: 4px;
+  border-left: 2px solid rgba(148, 163, 184, 0.6);
+  padding-left: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 4px;
+}
+
+.timeline-item .dot {
+  position: absolute;
+  left: -15px;
+  top: 5px;
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: #4f46e5;
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.35);
+}
+
+.timeline-item h3 {
+  font-size: 15px;
+  margin: 0;
+}
+
+.timeline-item p {
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+/* side card */
+.detail-side-card {
+  background: rgba(15, 23, 42, 0.94);
+  border-radius: 18px;
+  padding: 18px 18px 20px;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  box-shadow: 0 16px 50px rgba(15, 23, 42, 0.8);
+}
+
+.side-price {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.current-price {
+  font-size: 26px;
+  font-weight: 800;
+  color: #22c55e;
+}
+
+.strike-price {
+  font-size: 14px;
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+.discount-text {
+  font-size: 12px;
+  color: #facc15;
+  margin-top: 4px;
+}
+
+.enroll-btn {
+  margin-top: 16px;
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(120deg, #6366f1, #22c55e);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 16px 40px rgba(22, 163, 74, 0.6);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.enroll-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 50px rgba(22, 163, 74, 0.8);
+}
+
+.side-list {
+  margin-top: 14px;
+  font-size: 13px;
+  color: #e5e7eb;
+  padding-left: 0;
+  list-style: none;
+}
+
+.side-list li {
+  margin-bottom: 6px;
+}
+
+@media (max-width: 900px) {
+  .detail-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
