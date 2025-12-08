@@ -42,7 +42,7 @@ h1 {
   line-height: 1.2;
 }
 
-button {
+/* button {
   border-radius: 8px;
   border: none;
   padding: 0.6em 1.2em;
@@ -57,6 +57,6 @@ button {
 
 button:hover {
   background-color: #6366f1;
-}
+} */
 
 
