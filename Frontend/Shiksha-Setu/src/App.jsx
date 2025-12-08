@@ -4,7 +4,8 @@ import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import Courses from "./Pages/Courses";
 import Navbar from "./Components/Navbar"; 
-import Courses from "./Pages/Courses";
+import ThreeAnimation from "./Components/ThreeAnimation";
+// import Courses from "./Pages/Courses";
 import CourseDetails from "./Pages/CourseDetails";  
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="/courses/details" element={<CourseDetails/>} />
+          <Route path="/three" element={<ThreeAnimation />} />
         </Routes>
 
       </BrowserRouter>
