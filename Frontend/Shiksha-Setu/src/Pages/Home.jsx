@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import homepageImage from "../assets/homepage.png";
 import Mousumi from "../assets/Mousumi.jpg";
 import "../App.css";
@@ -11,9 +11,27 @@ import Yash from "../assets/Yash.jpg";
 
 export default function Home() {
   const [zoomImg, setZoomImg] = useState(null);
+  const [showIntro, setShowIntro] = useState(true);
+
+useEffect(() => {
+  const timer = setTimeout(() => {
+    setShowIntro(false);
+  }, 2000); // 2 seconds
+
+  return () => clearTimeout(timer);
+}, []);
+
 
   return (
+    
     <div className="home-container">
+      {showIntro && (
+  <div className="intro-overlay">
+    <h1 className="intro-logo">Shiksha Setu</h1>
+    <p className="intro-tagline">Your Learning Destination</p>
+  </div>
+)}
+
       {/* HERO – dark like CodeHelp, full width */}
       <section className="hero-section" data-aos="fade-up">
         <div className="hero-left">
@@ -167,7 +185,10 @@ export default function Home() {
     <img src={zoomImg} alt="Zoomed" className="zoom-img" />
   </div>
 )}
-  
+<a href="/register" className="floating-cta">
+  Join Now 🚀
+  <span className="cta-tooltip">Create your free account</span>
+</a>
 
     </div>
   );
