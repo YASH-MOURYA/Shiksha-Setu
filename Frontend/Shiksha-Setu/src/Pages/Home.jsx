@@ -42,8 +42,8 @@ useEffect(() => {
             Learn from mentors and get ready for your future.
           </p>
           <div className="hero-actions">
-            <button className="primary-btn">Explore Courses</button>
-            <button className="secondary-btn">View Tutorials</button>
+            <a href="/courses" className="primary-btn">Explore Courses</a>
+            <a href="/tutorials" className="secondary-btn">View Tutorials</a>
           </div>
         </div>
 
