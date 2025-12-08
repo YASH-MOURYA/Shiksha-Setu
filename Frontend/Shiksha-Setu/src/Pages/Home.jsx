@@ -1,7 +1,17 @@
+import { useState } from "react";
 import homepageImage from "../assets/homepage.png";
+import Mousumi from "../assets/Mousumi.jpg";
 import "../App.css";
+import Harshit from "../assets/Harshit.jpg";
+import Shristi from "../assets/Shristi.jpg";
+import Pranav from "../assets/Pranav.png";
+
+
+
 
 export default function Home() {
+  const [zoomImg, setZoomImg] = useState(null);
+
   return (
     <div className="home-container">
       {/* HERO – dark like CodeHelp, full width */}
@@ -95,19 +105,41 @@ export default function Home() {
           </div>
 
           <div className="mentor-card" data-aos="flip-left" data-aos-delay="150">
-            <div className="mentor-photo"></div>
+            <div className="mentor-photo" onClick={()=>{
+              setZoomImg(Harshit)
+            }}>
+            <img src={Harshit} alt="Harshit" /></div>
             <h3>Harshit</h3>
             <p>Homepage & UI/UX</p>
           </div>
 
+
           <div className="mentor-card" data-aos="flip-left" data-aos-delay="300">
-            <div className="mentor-photo"></div>
+            <div className="mentor-photo" onClick={()=>{
+              setZoomImg(Mousumi)
+            }}>
+              <img src={Mousumi} alt="Mousumi" />
+            </div>
+            <h3>Mousumi</h3>
+            <p>Course</p>
+          </div>
+
+          <div className="mentor-card" data-aos="flip-left" data-aos-delay="450">
+            <div className="mentor-photo" onClick={()=>{
+              setZoomImg(Pranav)
+            }}>
+              <img src={Pranav} alt="Pranav"/>
+            </div>
             <h3>Pranav</h3>
             <p>Contact & Articles</p>
           </div>
 
-          <div className="mentor-card" data-aos="flip-left" data-aos-delay="450">
-            <div className="mentor-photo"></div>
+          <div className="mentor-card" data-aos="flip-left" data-aos-delay="600">
+            <div className="mentor-photo" onClick={()=>{
+              setZoomImg(Shristi)
+            }}>
+              <img src={Shristi} alt="Shristi" />
+            </div>
             <h3>Shristi</h3>
             <p>Tutorials & Notes</p>
           </div>
@@ -125,6 +157,14 @@ export default function Home() {
           <a href="/register" className="primary-btn">Register</a>
         </div>
       </section>
+      {zoomImg && (<div className="image-modal" onClick={() => setZoomImg(null)}>
+
+        <img src={zoomImg} alt="Zoomed" />
+
+      </div>
+
+      )}
+
     </div>
   );
 }
