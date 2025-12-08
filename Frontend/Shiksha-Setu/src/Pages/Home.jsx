@@ -32,8 +32,10 @@ export default function Home() {
         <div className="hero-right" data-aos="zoom-in" data-aos-delay="200">
           <div className="hero-image-wrapper">
             <img src={homepageImage} alt="Learning" />
-            <div className="hero-floating-card">
-              <p>🎓 1200+ learners</p>
+            <div className="hero-floating-card" onClick={()=>{
+              setZoomImg(homepageImage)
+            }}>
+              <p>🎓 100+ learners</p>
               <span>Joining Shiksha Setu</span>
             </div>
           </div>
@@ -160,13 +162,12 @@ export default function Home() {
           <a href="/register" className="primary-btn">Register</a>
         </div>
       </section>
-      {zoomImg && (<div className="image-modal" onClick={() => setZoomImg(null)}>
-
-        <img src={zoomImg} alt="Zoomed" />
-
-      </div>
-
-      )}
+      {zoomImg && (
+  <div className="zoom-overlay" onClick={() => setZoomImg(null)}>
+    <img src={zoomImg} alt="Zoomed" className="zoom-img" />
+  </div>
+)}
+  
 
     </div>
   );
