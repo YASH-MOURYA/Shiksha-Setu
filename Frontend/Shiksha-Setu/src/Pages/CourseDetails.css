@@ -1,0 +1,24 @@
+.banner {
+  background: #1d4ed8;
+  color: white;
+  padding: 50px;
+  text-align: center;
+}
+
+.overview, .syllabus {
+  padding: 30px;
+  background: white;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.enroll-btn {
+  display: block;
+  margin: 30px auto;
+  padding: 12px 30px;
+  background: #1d4ed8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}

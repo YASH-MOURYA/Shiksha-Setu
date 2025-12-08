@@ -1,7 +1,11 @@
-export default function Courses() {
-  return (
-    <div>
-      <h1>Courses Page</h1>
-    </div>
-  );
+import "./Courses.css";
+export default function Courses(){
+  const courses=[
+    {
+      title: "Full Stack Web Development",
+      duration: "6 Months",
+      price: "Free",
+      
+    }
+  ]
 }
