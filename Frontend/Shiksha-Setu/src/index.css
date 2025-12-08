@@ -1,5 +1,7 @@
 /* REMOVE VITE DEFAULT CENTERING */
 /* Global styles */
+@import "tailwindcss";
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -57,4 +59,4 @@ button:hover {
   background-color: #6366f1;
 }
 
-/* L*
+
