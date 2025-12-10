@@ -36,7 +36,7 @@ function LoginForm() {
     >
       <label className="w-full">
         <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
-          Email Address <sup className="text-pink-200">*</sup>
+          Email Address<span className="text-[#EF476F]">*</span>
         </p>
         <input
           required
@@ -48,12 +48,12 @@ function LoginForm() {
           style={{
             boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
           }}
-          className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] text-richblack-5"
+          className="w-full rounded-[0.5rem] bg-[#161D29] p-[12px] text-richblack-5"
         />
       </label>
       <label className="relative">
         <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
-          Password <sup className="text-pink-200">*</sup>
+          Password<span className="text-[#EF476F]">*</span>
         </p>
         <input
           required
@@ -65,7 +65,7 @@ function LoginForm() {
           style={{
             boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
           }}
-          className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] pr-12 text-richblack-5"
+          className="w-full rounded-[0.5rem] bg-[#161D29] p-[12px] pr-12 text-richblack-5"
         />
         <span
           onClick={() => setShowPassword((prev) => !prev)}
@@ -85,7 +85,8 @@ function LoginForm() {
       </label>
       <button
         type="submit"
-        className="mt-6 rounded-[8px] bg-yellow-50 py-[8px] px-[12px] font-medium text-richblack-900"
+        style={{ boxShadow: "rgba(244, 229, 156, 1) 1px 1px 0px 1px" }}
+        className="mt-6 rounded-[8px] bg-yellow-500 py-[8px] px-[12px] font-medium text-black"
       >
         Sign In
       </button>

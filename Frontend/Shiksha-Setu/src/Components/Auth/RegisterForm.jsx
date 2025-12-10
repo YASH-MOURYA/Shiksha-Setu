@@ -82,7 +82,7 @@ const RegisterForm = () => {
         <div className="flex gap-x-4 mt-[20px]">
           <label className="w-full">
             <p className="text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]">
-              First Name<span className="text-pink-200">*</span>
+              First Name<span className="text-[#EF476F]">*</span>
             </p>
             <input
               required
@@ -91,13 +91,13 @@ const RegisterForm = () => {
               onChange={changeHandler}
               placeholder="Enter First Name"
               value={formData.firstName}
-              className="bg-richblack-800 rounded-[0.5rem] text-richblack-5 w-full p-[12px] border-b-[1px] border-gray-500"
+              className="bg-[#161D29] rounded-[0.5rem] text-richblack-5 w-full p-[12px] border-b-[1px] border-gray-500"
             />
           </label>
 
           <label className="w-full">
             <p className="text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]">
-              Last Name<span className="text-pink-200">*</span>
+              Last Name<span className="text-[#EF476F]">*</span>
             </p>
             <input
               required
@@ -106,7 +106,7 @@ const RegisterForm = () => {
               onChange={changeHandler}
               placeholder="Enter Last Name"
               value={formData.lastName}
-              className="bg-richblack-800 rounded-[0.5rem] text-richblack-5 w-full p-[12px] border-b-[1px] border-gray-500"
+              className="bg-[#161D29] rounded-[0.5rem] text-richblack-5 w-full p-[12px] border-b-[1px] border-gray-500"
             />
           </label>
         </div>
@@ -114,7 +114,7 @@ const RegisterForm = () => {
         <div className="mt-[20px]">
           <label className="w-full mt-[20px]">
             <p className="text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]">
-              Email Address<span className="text-pink-200">*</span>
+              Email Address<span className="text-[#EF476F]">*</span>
             </p>
             <input
               required
@@ -123,7 +123,7 @@ const RegisterForm = () => {
               onChange={changeHandler}
               placeholder="Enter Email Address "
               value={formData.email}
-              className="bg-richblack-800 rounded-[0.5rem] text-richblack-5 w-full p-[12px] border-b-[1px] border-gray-500"
+              className="bg-[#161D29] rounded-[0.5rem] text-richblack-5 w-full p-[12px] border-b-[1px] border-gray-500"
             />
           </label>
         </div>
@@ -132,7 +132,7 @@ const RegisterForm = () => {
         <div className="w-full flex gap-x-4 mt-[20px]">
           <label className="w-full relative">
             <p className="text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]">
-              Create Password<span className="text-pink-200">*</span>
+              Create Password<span className="text-[#EF476F]">*</span>
             </p>
             <input
               required
@@ -141,7 +141,7 @@ const RegisterForm = () => {
               onChange={changeHandler}
               placeholder="Enter Password"
               value={formData.password}
-              className="bg-richblack-800 rounded-[0.5rem] text-richblack-5 w-full p-[12px] border-b-[1px] border-gray-500"
+              className="bg-[#161D29] rounded-[0.5rem] text-richblack-5 w-full p-[12px] border-b-[1px] border-gray-500"
             />
             <span
               className="absolute right-3 top-[38px] cursor-pointer"
@@ -157,7 +157,7 @@ const RegisterForm = () => {
 
           <label className="w-full relative">
             <p className="text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]">
-              Confirm Password<span className="text-pink-200">*</span>
+              Confirm Password<span className="text-[#EF476F]">*</span>
             </p>
             <input
               required
@@ -166,7 +166,7 @@ const RegisterForm = () => {
               onChange={changeHandler}
               placeholder="Confirm Password"
               value={formData.confirmPassword}
-              className="bg-richblack-800 rounded-[0.5rem] text-richblack-5 w-full p-[12px] border-b-[1px] border-gray-500"
+              className="bg-[#161D29] rounded-[0.5rem] text-richblack-5 w-full p-[12px] border-b-[1px] border-gray-500"
             />
             <span
               className="absolute right-3 top-[38px] cursor-pointer"
@@ -181,8 +181,8 @@ const RegisterForm = () => {
           </label>
         </div>
         <button
-          style={{ boxShadow: "rgb(255, 235, 135) 1px 1px 0px 1px" }}
-          className=" w-full bg-yellow-50 rounded-[8px] font-medium text-richblack-900 px-[12px] py-[8px] mt-6"
+          style={{ boxShadow: "rgba(244, 229, 156, 1) 1px 1px 0px 1px" }}
+          className=" w-full bg-yellow-400 rounded-[8px] font-medium text-black px-[12px] py-[8px] mt-6"
         >
           Create Account
         </button>

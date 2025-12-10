@@ -10,6 +10,7 @@ const Register = () => {
       desc2="Education to future-proof your career."
       image={RegisterImg}
       formType="Register"
+      className=" bg-[#000814]"
     />
   );
 };
