@@ -5,6 +5,8 @@ import "../App.css";
 import Harshit from "../assets/Harshit.jpg";
 import Shristi from "../assets/Shristi.jpg";
 import Pranav from "../assets/Pranav.png";
+import { Link } from "react-router-dom";
+
 import Yash from "../assets/Yash.jpg";
 
 
@@ -32,33 +34,43 @@ useEffect(() => {
   </div>
 )}
 
-      {/* HERO – dark like CodeHelp, full width */}
-      <section className="hero-section" data-aos="fade-up">
-        <div className="hero-left">
-          <p className="hero-badge">New • Shiksha Setu Learning Platform</p>
-          <h1>Your Learning Destination</h1>
-          <p className="hero-sub">
-            Sharpen your skills with structured courses designed for real-world growth.
-            Learn from mentors and get ready for your future.
-          </p>
-          <div className="hero-actions">
-            <a href="/courses" className="primary-btn">Explore Courses</a>
-            <a href="/tutorials" className="secondary-btn">View Tutorials</a>
-          </div>
-        </div>
+{/* HERO – dark like CodeHelp, full width */}
+<section className="hero-section" data-aos="fade-up">
+  <div className="hero-left">
+    <p className="hero-badge" data-aos="fade-right">New • Shiksha Setu Learning Platform</p>
 
-        <div className="hero-right" data-aos="zoom-in" data-aos-delay="200">
-          <div className="hero-image-wrapper">
-            <img src={homepageImage} alt="Learning" />
-            <div className="hero-floating-card" onClick={()=>{
-              setZoomImg(homepageImage)
-            }}>
-              <p>🎓 100+ learners</p>
-              <span>Joining Shiksha Setu</span>
-            </div>
-          </div>
-        </div>
-      </section>
+    <h1 data-aos="fade-right" data-aos-delay="100">
+      Your Learning Destination
+    </h1>
+
+    <p className="hero-sub" data-aos="fade-right" data-aos-delay="200">
+      Sharpen your skills with structured courses designed for real-world growth.
+      Learn from mentors and get ready for your future.
+    </p>
+
+    <div className="hero-actions" data-aos="fade-up" data-aos-delay="300">
+      <Link to="/courses" className="primary-btn">Explore Courses</Link>
+      <Link to="/tutorials" className="secondary-btn">View Tutorials</Link>
+
+    </div>
+  </div>
+
+  <div className="hero-right" data-aos="zoom-in" data-aos-delay="400">
+    <div className="hero-image-wrapper">
+      <img src={homepageImage} alt="Learning" />
+
+      <div
+        className="hero-floating-card"
+        onClick={() => setZoomImg(homepageImage)}
+        data-aos="fade-up"
+        data-aos-delay="600"
+      >
+        <p>🎓 100+ learners</p>
+        <span>Joining Shiksha Setu</span>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* WHY SECTION – light like Udemy */}
       <section className="why-section">
@@ -176,8 +188,9 @@ useEffect(() => {
           <p>Login or register to access courses, tutorials, articles, and more.</p>
         </div>
         <div className="offer-actions">
-          <a href="/login" className="outline-btn">Login</a>
-          <a href="/register" className="primary-btn">Register</a>
+          <Link to="/login" className="outline-btn">Login</Link>
+          <Link to="/register" className="primary-btn">Register</Link>
+
         </div>
       </section>
       {zoomImg && (
@@ -185,10 +198,11 @@ useEffect(() => {
     <img src={zoomImg} alt="Zoomed" className="zoom-img" />
   </div>
 )}
-<a href="/register" className="floating-cta">
+<Link to="/register" className="floating-cta">
   Join Now 🚀
   <span className="cta-tooltip">Create your free account</span>
-</a>
+</Link>
+
 
     </div>
   );
