@@ -6,7 +6,7 @@ export default function Navbar() {
     <nav className="navbar">
       {/* LEFT */}
       <div className="nav-left">
-        <Link to="/" className="nav-logo">Shiksha Setu</Link>
+        <Link to="/" className="nav-logo brand-text">Shiksha Setu</Link>
       </div>
 
       {/* CENTER - SEARCH BAR */}
