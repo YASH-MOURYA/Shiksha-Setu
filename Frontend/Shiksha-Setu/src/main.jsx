@@ -1,10 +1,11 @@
 import { StrictMode, useEffect } from "react";
 import { createRoot } from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App.jsx";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { BrowserRouter } from "react-router-dom";
+
 import { Provider } from "react-redux";
 import { configureStore } from "@reduxjs/toolkit";
 import rootReducer from "./reducer";
@@ -21,7 +22,11 @@ function Root() {
     });
   }, []);
 
-  return <App />;
+  return (
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  );
 }
 
 

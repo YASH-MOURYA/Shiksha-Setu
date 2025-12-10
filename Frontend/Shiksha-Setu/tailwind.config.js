@@ -1,19 +1,22 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+/** @type {import('tailwindcss/postcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}", // Must point to where your components are
+  ],
   theme: {
     fontFamily: {
       inter: ["Inter", "sans-serif"],
       "edu-sa": ["Edu SA Beginner", "cursive"],
       mono: ["Roboto Mono", "monospace"],
     },
+
     extend: {
       colors: {
         white: "#fff",
         blacked: "#000",
         transparent: "#ffffff00",
 
-        // Flattened richblack
         richblack5: "#F1F2FF",
         richblack25: "#DBDDEA",
         richblack50: "#C5C7D4",
@@ -27,7 +30,6 @@ module.exports = {
         richblack800: "#161D29",
         richblack900: "#000814",
 
-        // Flattened richblue
         richblue5: "#ECF5FF",
         richblue25: "#C6D6E1",
         richblue50: "#A0B7C3",
@@ -41,7 +43,6 @@ module.exports = {
         richblue800: "#01212A",
         richblue900: "#001B22",
 
-        // Flattened blue
         blue5: "#EAF5FF",
         blue25: "#B4DAEC",
         blue50: "#7EC0D9",
@@ -60,14 +61,61 @@ module.exports = {
         maxContent: "1260px",
         maxContentTab: "650px",
       },
+
       boxShadow: {
         mine: "-170px 42px 255px 179px rgba(0,0,0,1)",
         border: "15px 15px 0px 2px white",
       },
+
       screens: {
         xs: "0px",
       },
+      keyframes: {
+        // --- EXISTING KEYFRAMES ---
+        slideInLeft: {
+          '0%': { transform: 'translateX(-100%)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' },
+        },
+        slideInRight: {
+          '0%': { transform: 'translateX(100%)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' },
+        },
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0) scale(1.02)' },
+          '50%': { transform: 'translateY(-10px) scale(1)' },
+        },
+        
+        // --- NEW KEYFRAMES FOR ADVANCED ANIMATIONS ---
+        shake: {
+          '0%, 100%': { transform: 'translateX(0)' },
+          '20%, 60%': { transform: 'translateX(-5px)' },
+          '40%, 80%': { transform: 'translateX(5px)' },
+        },
+        slideUp: {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        slideDown: { // For error messages
+          '0%': { opacity: '0', transform: 'translateY(-10px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        // Parallax keyframes are technically defined here, but we will use JS for the smooth effect
+      },
+      animation: {
+        slideInLeft: 'slideInLeft 0.7s ease-out forwards',
+        slideInRight: 'slideInRight 0.7s ease-out forwards',
+        fadeIn: 'fadeIn 0.5s ease-in forwards',
+        float: 'float 3s ease-in-out infinite',
+        
+        // --- NEW ANIMATION UTILITIES ---
+        shake: 'shake 0.5s ease-in-out',
+        slideUp: 'slideUp 0.3s ease-out forwards',
+        slideDown: 'slideDown 0.3s ease-in forwards',
+      },
     },
   },
-  plugins: [],
 };

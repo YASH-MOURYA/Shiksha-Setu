@@ -1,6 +1,6 @@
-/* REMOVE VITE DEFAULT CENTERING */
-/* Global styles */
 @import "tailwindcss";
+@config "../tailwind.config.js";
+
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;

@@ -81,7 +81,7 @@ const RegisterForm = () => {
         {/* first name and lastName */}
         <div className="flex gap-x-4 mt-[20px]">
           <label className="w-full">
-            <p className="text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]">
+            <p className="text-[0.875rem] text-richblack5 mb-1 leading-[1.375rem]">
               First Name<span className="text-[#EF476F]">*</span>
             </p>
             <input
@@ -91,12 +91,12 @@ const RegisterForm = () => {
               onChange={changeHandler}
               placeholder="Enter First Name"
               value={formData.firstName}
-              className="bg-[#161D29] rounded-[0.5rem] text-richblack-5 w-full p-[12px] border-b-[1px] border-gray-500"
+              className="bg-[#161D29] rounded-[0.5rem] text-richblack5 w-full p-[12px] border-b-[1px] border-gray-500"
             />
           </label>
 
           <label className="w-full">
-            <p className="text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]">
+            <p className="text-[0.875rem] text-richblack5 mb-1 leading-[1.375rem]">
               Last Name<span className="text-[#EF476F]">*</span>
             </p>
             <input
@@ -106,14 +106,14 @@ const RegisterForm = () => {
               onChange={changeHandler}
               placeholder="Enter Last Name"
               value={formData.lastName}
-              className="bg-[#161D29] rounded-[0.5rem] text-richblack-5 w-full p-[12px] border-b-[1px] border-gray-500"
+              className="bg-[#161D29] rounded-[0.5rem] text-richblack5 w-full p-[12px] border-b-[1px] border-gray-500"
             />
           </label>
         </div>
         {/* email Add */}
         <div className="mt-[20px]">
           <label className="w-full mt-[20px]">
-            <p className="text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]">
+            <p className="text-[0.875rem] text-richblack5 mb-1 leading-[1.375rem]">
               Email Address<span className="text-[#EF476F]">*</span>
             </p>
             <input
@@ -123,7 +123,7 @@ const RegisterForm = () => {
               onChange={changeHandler}
               placeholder="Enter Email Address "
               value={formData.email}
-              className="bg-[#161D29] rounded-[0.5rem] text-richblack-5 w-full p-[12px] border-b-[1px] border-gray-500"
+              className="bg-[#161D29] rounded-[0.5rem] text-richblack5 w-full p-[12px] border-b-[1px] border-gray-500"
             />
           </label>
         </div>
@@ -131,7 +131,7 @@ const RegisterForm = () => {
         {/* createPassword and Confirm Password */}
         <div className="w-full flex gap-x-4 mt-[20px]">
           <label className="w-full relative">
-            <p className="text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]">
+            <p className="text-[0.875rem] text-richblack5 mb-1 leading-[1.375rem]">
               Create Password<span className="text-[#EF476F]">*</span>
             </p>
             <input
@@ -141,7 +141,7 @@ const RegisterForm = () => {
               onChange={changeHandler}
               placeholder="Enter Password"
               value={formData.password}
-              className="bg-[#161D29] rounded-[0.5rem] text-richblack-5 w-full p-[12px] border-b-[1px] border-gray-500"
+              className="bg-[#161D29] rounded-[0.5rem] text-richblack5 w-full p-[12px] border-b-[1px] border-gray-500"
             />
             <span
               className="absolute right-3 top-[38px] cursor-pointer"
@@ -156,7 +156,7 @@ const RegisterForm = () => {
           </label>
 
           <label className="w-full relative">
-            <p className="text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]">
+            <p className="text-[0.875rem] text-richblack5 mb-1 leading-[1.375rem]">
               Confirm Password<span className="text-[#EF476F]">*</span>
             </p>
             <input
@@ -166,7 +166,7 @@ const RegisterForm = () => {
               onChange={changeHandler}
               placeholder="Confirm Password"
               value={formData.confirmPassword}
-              className="bg-[#161D29] rounded-[0.5rem] text-richblack-5 w-full p-[12px] border-b-[1px] border-gray-500"
+              className="bg-[#161D29] rounded-[0.5rem] text-richblack5 w-full p-[12px] border-b-[1px] border-gray-500"
             />
             <span
               className="absolute right-3 top-[38px] cursor-pointer"

@@ -4,21 +4,24 @@ import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import Courses from "./Pages/Courses";
 import Navbar from "./Components/Navbar";   
+import Tutorials from "./Pages/Tutorials";
+import TutorialDetail from "./Pages/TutorialDetail";
+
 
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <Navbar />    {/* Navbar now works */}
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/tutorials" element={<Tutorials />} />
+        <Route path="/courses" element={<Courses />} />
+        <Route path="/tutorials/:id" element={<TutorialDetail />} />
+        
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/courses" element={<Courses />} />
-        </Routes>
-
-      </BrowserRouter>
+      </Routes>
     </>
   );
 }

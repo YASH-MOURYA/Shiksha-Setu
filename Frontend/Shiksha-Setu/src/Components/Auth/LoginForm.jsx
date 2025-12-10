@@ -32,7 +32,8 @@ function LoginForm() {
   return (
     <form
       onSubmit={handleOnSubmit}
-      className="mt-6 flex w-full flex-col gap-y-4"
+      // Fades in slightly later than the text to ensure the slide-in is smooth
+      className="mt-6 flex w-full flex-col gap-y-4 animate-fadeIn [animation-delay:0.5s]"
     >
       <label className="w-full">
         <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
@@ -48,7 +49,8 @@ function LoginForm() {
           style={{
             boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
           }}
-          className="w-full rounded-[0.5rem] bg-[#161D29] p-[12px] text-richblack-5"
+          // IMPRESSIVE: Focus ring and subtle shadow on hover
+          className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] text-richblack-5 transition-all duration-200 hover:shadow-lg hover:shadow-blue-200/20 focus:outline-none focus:ring-2 focus:ring-blue-100 focus:ring-opacity-70"
         />
       </label>
       <label className="relative">
@@ -65,11 +67,13 @@ function LoginForm() {
           style={{
             boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
           }}
-          className="w-full rounded-[0.5rem] bg-[#161D29] p-[12px] pr-12 text-richblack-5"
+          // IMPRESSIVE: Focus ring and subtle shadow on hover
+          className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] pr-12 text-richblack-5 transition-all duration-200 hover:shadow-lg hover:shadow-blue-200/20 focus:outline-none focus:ring-2 focus:ring-blue-100 focus:ring-opacity-70"
         />
         <span
           onClick={() => setShowPassword((prev) => !prev)}
-          className="absolute right-3 top-[38px] z-[10] cursor-pointer"
+          // IMPRESSIVE: Smooth transition for cursor interaction
+          className="absolute right-3 top-[38px] z-[10] cursor-pointer transition-opacity duration-300 hover:opacity-80"
         >
           {showPassword ? (
             <AiOutlineEyeInvisible fontSize={24} fill="#AFB2BF" />
@@ -78,7 +82,7 @@ function LoginForm() {
           )}
         </span>
         <Link to="/forgot-password">
-          <p className="mt-1 ml-auto max-w-max text-xs text-blue-100">
+          <p className="mt-1 ml-auto max-w-max text-xs text-blue-100 transition-colors duration-200 hover:text-blue-200 hover:underline">
             Forgot Password
           </p>
         </Link>
@@ -86,7 +90,8 @@ function LoginForm() {
       <button
         type="submit"
         style={{ boxShadow: "rgba(244, 229, 156, 1) 1px 1px 0px 1px" }}
-        className="mt-6 rounded-[8px] bg-yellow-500 py-[8px] px-[12px] font-medium text-black"
+        // IMPRESSIVE: The 3D Press effect (Lift on hover, squish on press)
+        className="mt-6 rounded-[8px] bg-yellow-500 py-[8px] px-[12px] font-medium text-black transition-all duration-200 hover:scale-[1.01] hover:shadow-yellow-500/50 active:scale-[0.99]"
       >
         Sign In
       </button>
