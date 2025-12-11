@@ -103,7 +103,11 @@ export default {
           '0%': { opacity: '0', transform: 'translateY(-10px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
-        // Parallax keyframes are technically defined here, but we will use JS for the smooth effect
+        customPulse: {
+    '0%, 100%': { opacity: '0.4', transform: 'scale(0.8)' },
+    '50%': { opacity: '0.8', transform: 'scale(1)' },
+},
+
       },
       animation: {
         slideInLeft: 'slideInLeft 0.7s ease-out forwards',
@@ -115,6 +119,8 @@ export default {
         shake: 'shake 0.5s ease-in-out',
         slideUp: 'slideUp 0.3s ease-out forwards',
         slideDown: 'slideDown 0.3s ease-in forwards',
+
+        cursorPulse: 'customPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
     },
   },

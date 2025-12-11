@@ -4,7 +4,7 @@ import SignupForm from "./RegisterForm";
 import LoginForm from "./LoginForm";
 import { FcGoogle } from "react-icons/fc";
 import { useSelector } from "react-redux";
-
+import CursorEffect from "../CursorEffect";
 const Template = ({ title, desc1, desc2, image, formType }) => {
   // const { loading } = useSelector((state) => state.auth);   uncomment after redux
   const loading = false;//dummy for redux
@@ -19,7 +19,10 @@ const Template = ({ title, desc1, desc2, image, formType }) => {
         </div>
       ) : (
         <div className="flex justify-between w-11/12 max-w-[1160px] py-12 mx-auto gap-x-12 gap-y-0">
-          
+          {/* <CursorEffect 
+        colorClass="bg-richblue900" // Use your custom color (e.g., bg-blue-200 or bg-richblue-100)
+        size={200} // Size in pixels (e.g., 70px diameter)
+      /> */}
           {/* LEFT CONTENT BLOCK: Slide-In from Left with Staggered Elements */}
           <div className="w-11/12 max-w-[450px] animate-slideInLeft [animation-delay:0.1s] [animation-duration:0.6s]">
             <h2 className="text-richblack-5 font-semibold text-[2.2rem] leading-[2.375rem]">
