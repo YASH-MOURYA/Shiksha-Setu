@@ -28,34 +28,19 @@ const courses = [
 
   { id: 18, title: "UI/UX With Figma", subtitle: "Wireframing to final UI", duration: "1.5 Months", level: "Beginner", reviews: "4.7", price: "₹1,999", isFree: false, tag: "Creative" },
   { id: 19, title: "Graphic Designing Bootcamp", subtitle: "Posters + Thumbnails", duration: "1 Month", level: "Beginner", reviews: "4.9", price: "₹1,499", isFree: false, tag: "Creative" },
-  { id: 20, title: "3D Animation With Blender", subtitle: "Renders & Animations", duration: "6 Weeks", level: "Beginner", reviews: "4.8", price: "₹2,999", isFree: false, tag: "Creative" },
-
-  { id: 21, title: "Unity Game Development", subtitle: "2D gameplay systems", duration: "3 Months", level: "Intermediate", reviews: "4.7", price: "₹4,499", isFree: false, tag: "Premium" },
-  { id: 22, title: "Blockchain & Smart Contracts", subtitle: "Solidity + MetaMask", duration: "4 Months", level: "Advanced", reviews: "4.8", price: "₹9,999", isFree: false, tag: "Trending" },
-  { id: 23, title: "Digital Forensics & Cybercrime", subtitle: "Crime solving techniques", duration: "4 Months", level: "Advanced", reviews: "4.7", price: "₹7,999", isFree: false, tag: "Enterprise" },
-
-  { id: 24, title: "Automation Testing With Selenium", subtitle: "UI + API Automation", duration: "2 Months", level: "Intermediate", reviews: "4.6", price: "₹2,999", isFree: false, tag: "Professional" },
-  { id: 25, title: "Communication Skills", subtitle: "Corporate speaking skills", duration: "1 Month", level: "Beginner", reviews: "4.8", price: "Free", isFree: true, tag: "Free" },
-  { id: 26, title: "E-Commerce MERN Masterclass", subtitle: "Build full ecommerce system", duration: "2 Months", level: "Intermediate", reviews: "4.8", price: "₹3,999", isFree: false, tag: "Project" },
-
-  { id: 27, title: "Digital Marketing Essentials", subtitle: "SEO, SEM, Funnel Creation", duration: "2 Months", level: "Beginner → Advanced", reviews: "4.6", price: "₹2,999", isFree: false, tag: "Business" },
-  { id: 28, title: "Freelancing Success Program", subtitle: "Earn from Home easily", duration: "30 Days", level: "Beginner", reviews: "4.8", price: "Free", isFree: true, tag: "Free" },
-  { id: 29, title: "DSA Interview Booster", subtitle: "Linked List / Tree / Graph patterns", duration: "1 Month", level: "Intermediate", reviews: "4.7", price: "₹799", isFree: false, tag: "Bonus" },
 ];
 
 export default function Courses() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.querySelectorAll(".reveal").forEach(el => {
-      el.classList.add("visible");
-    });
+    document.querySelectorAll(".reveal").forEach(el => el.classList.add("visible"));
   }, []);
 
   return (
     <main className="courses-page">
 
-      {/* TOP SECTION */}
+      {/* HERO SECTION */}
       <section className="courses-hero reveal">
         <p className="hero-tag">✨ Trending Courses</p>
 
@@ -100,10 +85,11 @@ export default function Courses() {
               </div>
 
               <div className="course-footer">
-                {course.isFree ?
-                  <span className="price-free">FREE</span> :
+                {course.isFree ? (
+                  <span className="price-free">FREE</span>
+                ) : (
                   <span className="price-paid">{course.price}</span>
-                }
+                )}
 
                 <button
                   className="course-btn rippleBtn"

@@ -1,44 +1,76 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import homepageImage from "../assets/homepage.png";
 import Mousumi from "../assets/Mousumi.jpg";
 import "../App.css";
 import Harshit from "../assets/Harshit.jpg";
 import Shristi from "../assets/Shristi.jpg";
 import Pranav from "../assets/Pranav.png";
+import { Link } from "react-router-dom";
 
+import Yash from "../assets/Yash.jpg";
 
 
 
 export default function Home() {
   const [zoomImg, setZoomImg] = useState(null);
+  const [showIntro, setShowIntro] = useState(true);
+
+useEffect(() => {
+  const timer = setTimeout(() => {
+    setShowIntro(false);
+  }, 2000); // 2 seconds
+
+  return () => clearTimeout(timer);
+}, []);
+
 
   return (
+    
     <div className="home-container">
-      {/* HERO – dark like CodeHelp, full width */}
-      <section className="hero-section" data-aos="fade-up">
-        <div className="hero-left">
-          <p className="hero-badge">New • Shiksha Setu Learning Platform</p>
-          <h1>Your Learning Destination</h1>
-          <p className="hero-sub">
-            Sharpen your skills with structured courses designed for real-world growth.
-            Learn from mentors and get ready for your future.
-          </p>
-          <div className="hero-actions">
-            <button className="primary-btn">Explore Courses</button>
-            <button className="secondary-btn">View Tutorials</button>
-          </div>
-        </div>
+      {showIntro && (
+  <div className="intro-overlay">
+    <h1 className="intro-logo">Shiksha Setu</h1>
+    <p className="intro-tagline">Your Learning Destination</p>
+  </div>
+)}
 
-        <div className="hero-right" data-aos="zoom-in" data-aos-delay="200">
-          <div className="hero-image-wrapper">
-            <img src={homepageImage} alt="Learning" />
-            <div className="hero-floating-card">
-              <p>🎓 1200+ learners</p>
-              <span>Joining Shiksha Setu</span>
-            </div>
-          </div>
-        </div>
-      </section>
+{/* HERO – dark like CodeHelp, full width */}
+<section className="hero-section" data-aos="fade-up">
+  <div className="hero-left">
+    <p className="hero-badge" data-aos="fade-right">New • Shiksha Setu Learning Platform</p>
+
+    <h1 data-aos="fade-right" data-aos-delay="100">
+      Your Learning Destination
+    </h1>
+
+    <p className="hero-sub" data-aos="fade-right" data-aos-delay="200">
+      Sharpen your skills with structured courses designed for real-world growth.
+      Learn from mentors and get ready for your future.
+    </p>
+
+    <div className="hero-actions" data-aos="fade-up" data-aos-delay="300">
+      <Link to="/courses" className="primary-btn">Explore Courses</Link>
+      <Link to="/tutorials" className="secondary-btn">View Tutorials</Link>
+
+    </div>
+  </div>
+
+  <div className="hero-right" data-aos="zoom-in" data-aos-delay="400">
+    <div className="hero-image-wrapper">
+      <img src={homepageImage} alt="Learning" />
+
+      <div
+        className="hero-floating-card"
+        onClick={() => setZoomImg(homepageImage)}
+        data-aos="fade-up"
+        data-aos-delay="600"
+      >
+        <p>🎓 100+ learners</p>
+        <span>Joining Shiksha Setu</span>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* WHY SECTION – light like Udemy */}
       <section className="why-section">
@@ -99,9 +131,12 @@ export default function Home() {
 
         <div className="mentors-grid">
           <div className="mentor-card" data-aos="flip-left">
-            <div className="mentor-photo"></div>
+            <div className="mentor-photo" onClick={()=>{
+              setZoomImg(Yash)
+            }}>
+              <img src={Yash} alt ="Yash"/></div>
             <h3>Yash</h3>
-            <p>Project Lead & Backend</p>
+            <p>Project Lead</p>
           </div>
 
           <div className="mentor-card" data-aos="flip-left" data-aos-delay="150">
@@ -153,17 +188,21 @@ export default function Home() {
           <p>Login or register to access courses, tutorials, articles, and more.</p>
         </div>
         <div className="offer-actions">
-          <a href="/login" className="outline-btn">Login</a>
-          <a href="/register" className="primary-btn">Register</a>
+          <Link to="/login" className="outline-btn">Login</Link>
+          <Link to="/register" className="primary-btn">Register</Link>
+
         </div>
       </section>
-      {zoomImg && (<div className="image-modal" onClick={() => setZoomImg(null)}>
+      {zoomImg && (
+  <div className="zoom-overlay" onClick={() => setZoomImg(null)}>
+    <img src={zoomImg} alt="Zoomed" className="zoom-img" />
+  </div>
+)}
+<Link to="/register" className="floating-cta">
+  Join Now 🚀
+  <span className="cta-tooltip">Create your free account</span>
+</Link>
 
-        <img src={zoomImg} alt="Zoomed" />
-
-      </div>
-
-      )}
 
     </div>
   );
