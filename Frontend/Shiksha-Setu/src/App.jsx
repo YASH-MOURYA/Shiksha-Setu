@@ -4,25 +4,36 @@ import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import Courses from "./Pages/Courses";
 import Navbar from "./Components/Navbar";
+
 import Contact from "./Pages/Contact";
-import Articles from "./Pages/Articles";   
+import Articles from "./Pages/Articles";
+
+import CourseDetail from "./Pages/CourseDetail";
+import Tutorials from "./Pages/Tutorials";
+import TutorialDetail from "./Pages/TutorialDetail";
 
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <Navbar />    {/* Navbar now works */}
+      <Navbar />
+      <Routes>
+        {/* Home & Auth */}
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/courses" element={<Courses />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/articles" element={<Articles />} />
-          </Routes>
+        {/* Courses */}
+        <Route path="/courses" element={<Courses />} />
+        <Route path="/courses/details/:id" element={<CourseDetail />} />
 
-      </BrowserRouter>
+        {/* Extra Pages (your branch) */}
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/articles" element={<Articles />} />
+
+        {/* Tutorials (main branch) */}
+        <Route path="/tutorials" element={<Tutorials />} />
+        <Route path="/tutorials/:id" element={<TutorialDetail />} />
+      </Routes>
     </>
   );
 }
