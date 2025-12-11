@@ -2,8 +2,9 @@
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}", // Must point to where your components are
+    "./src/**/*.{js,ts,jsx,tsx}"
   ],
+
   theme: {
     fontFamily: {
       inter: ["Inter", "sans-serif"],
@@ -70,58 +71,55 @@ export default {
       screens: {
         xs: "0px",
       },
+
       keyframes: {
-        // --- EXISTING KEYFRAMES ---
         slideInLeft: {
-          '0%': { transform: 'translateX(-100%)', opacity: '0' },
-          '100%': { transform: 'translateX(0)', opacity: '1' },
+          "0%": { transform: "translateX(-100%)", opacity: "0" },
+          "100%": { transform: "translateX(0)", opacity: "1" },
         },
         slideInRight: {
-          '0%': { transform: 'translateX(100%)', opacity: '0' },
-          '100%': { transform: 'translateX(0)', opacity: '1' },
+          "0%": { transform: "translateX(100%)", opacity: "0" },
+          "100%": { transform: "translateX(0)", opacity: "1" },
         },
         fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
         },
         float: {
-          '0%, 100%': { transform: 'translateY(0) scale(1.02)' },
-          '50%': { transform: 'translateY(-10px) scale(1)' },
+          "0%, 100%": { transform: "translateY(0) scale(1.02)" },
+          "50%": { transform: "translateY(-10px) scale(1)" },
         },
-        
-        // --- NEW KEYFRAMES FOR ADVANCED ANIMATIONS ---
         shake: {
-          '0%, 100%': { transform: 'translateX(0)' },
-          '20%, 60%': { transform: 'translateX(-5px)' },
-          '40%, 80%': { transform: 'translateX(5px)' },
+          "0%, 100%": { transform: "translateX(0)" },
+          "20%, 60%": { transform: "translateX(-5px)" },
+          "40%, 80%": { transform: "translateX(5px)" },
         },
         slideUp: {
-          '0%': { opacity: '0', transform: 'translateY(20px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
+          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
         },
-        slideDown: { // For error messages
-          '0%': { opacity: '0', transform: 'translateY(-10px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
+        slideDown: {
+          "0%": { opacity: "0", transform: "translateY(-10px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
         },
         customPulse: {
-    '0%, 100%': { opacity: '0.4', transform: 'scale(0.8)' },
-    '50%': { opacity: '0.8', transform: 'scale(1)' },
-},
-
+          "0%, 100%": { opacity: "0.4", transform: "scale(0.8)" },
+          "50%": { opacity: "0.8", transform: "scale(1)" },
+        },
       },
-      animation: {
-        slideInLeft: 'slideInLeft 0.7s ease-out forwards',
-        slideInRight: 'slideInRight 0.7s ease-out forwards',
-        fadeIn: 'fadeIn 0.5s ease-in forwards',
-        float: 'float 3s ease-in-out infinite',
-        
-        // --- NEW ANIMATION UTILITIES ---
-        shake: 'shake 0.5s ease-in-out',
-        slideUp: 'slideUp 0.3s ease-out forwards',
-        slideDown: 'slideDown 0.3s ease-in forwards',
 
-        cursorPulse: 'customPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      animation: {
+        slideInLeft: "slideInLeft 0.7s ease-out forwards",
+        slideInRight: "slideInRight 0.7s ease-out forwards",
+        fadeIn: "fadeIn 0.5s ease-in forwards",
+        float: "float 3s ease-in-out infinite",
+
+        shake: "shake 0.5s ease-in-out",
+        slideUp: "slideUp 0.3s ease-out forwards",
+        slideDown: "slideDown 0.3s ease-in forwards",
+
+        cursorPulse: "customPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       },
     },
-  },
+  }
 };

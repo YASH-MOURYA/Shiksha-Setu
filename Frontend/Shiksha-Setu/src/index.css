@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @config "../tailwind.config.js";
 
-
+/* Root Theme */
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -17,7 +17,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Remove default flex-centering (THIS WAS BREAKING EVERYTHING) */
+/* Reset default layout */
 body {
   margin: 0;
   padding: 0;
@@ -27,6 +27,7 @@ body {
   background: #111827; /* CodeHelp dark theme */
 }
 
+/* Links */
 a {
   font-weight: 500;
   color: #6366f1;
@@ -36,13 +37,17 @@ a {
 a:hover {
   color: #818cf8;
 }
-/* 
+
+/* Headings */
 h1 {
   font-size: 3rem;
   line-height: 1.2;
-} */
+}
 
-/* button {
+/* 
+BUTTON STYLES (COMMENTED OUT)
+
+button {
   border-radius: 8px;
   border: none;
   padding: 0.6em 1.2em;
@@ -57,6 +62,6 @@ h1 {
 
 button:hover {
   background-color: #6366f1;
-} */
+}
 
-
+*/
