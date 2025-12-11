@@ -4,7 +4,9 @@ export default function Navbar() {
       <a href="/">Home</a> |
       <a href="/login"> Login </a> |
       <a href="/register"> Register </a> |
-      <a href="/courses"> Courses </a>
+      <a href="/courses"> Courses </a> |
+      <a href="/contact">Contact </a> | 
+      <a href="/articles">Articles</a>
     </nav>
   );
 }

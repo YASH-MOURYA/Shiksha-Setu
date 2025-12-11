@@ -1,0 +1,244 @@
+/* ===========================
+   CONTACT PAGE – FIXED LAYOUT
+   Matching your JSX (no ss-)
+   =========================== */
+
+.contact-container {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(-45deg, #0c0f16, #0e111a, #10131f, #0d0f17);
+  background-size: 400% 400%;
+  animation: contactBg 12s ease infinite;
+}
+
+@keyframes contactBg {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.contact-container {
+  padding: 80px 10%;
+  background: #0f0f17;
+  color: white;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+}
+
+/* Floating neon blobs */
+.contact-container::before,
+.contact-container::after {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  filter: blur(160px);
+  opacity: 0.4;
+  z-index: 0;
+  animation: contactBlobs 10s ease-in-out infinite alternate;
+}
+
+/* Purple blob */
+.contact-container::before {
+  background: #7d2ae8;
+  top: -120px;
+  left: -160px;
+}
+
+/* Blue blob */
+.contact-container::after {
+  background: #4b73ff;
+  bottom: -120px;
+  right: -160px;
+}
+
+@keyframes contactBlobs {
+  0% { transform: translateY(0px) scale(1); }
+  100% { transform: translateY(-45px) scale(1.1); }
+}
+
+
+/* HEADINGS */
+.page-title {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.page-sub {
+  font-size: 18px;
+  opacity: 0.8;
+  margin-bottom: 50px;
+}
+
+/* GRID LAYOUT */
+.contact-grid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  flex-wrap: wrap;
+  text-align: left;
+  margin-top: 30px;
+}
+
+/* FORM CONTAINER */
+.contact-form {
+  flex: 1;
+  min-width: 350px;
+  max-width: 450px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 35px;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-form label {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: inline-block;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 14px;
+  margin-bottom: 18px;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #7d2ae8;
+  box-shadow: 0 0 10px rgba(125, 42, 232, 0.5);
+}
+
+.contact-form textarea {
+  height: 140px;
+  resize: none;
+}
+
+/* BUTTON */
+.primary-btn {
+  width: 100%;
+  background: #7d2ae8;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+  transition: 0.3s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+  background: #9a4aff;
+}
+
+/* STATUS MESSAGE */
+.status-msg {
+  margin-top: 12px;
+  text-align: center;
+}
+
+/* CONTACT INFO (RIGHT SECTION) */
+.contact-info {
+  flex: 1;
+  min-width: 350px;
+  max-width: 450px;
+  padding: 35px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-info h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.contact-info strong {
+  color: #d2b5ff;
+}
+
+/* SOCIAL LINKS */
+.social-links {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social-links a {
+  color: #bdaaff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.social-links a:hover {
+  color: white;
+  transform: translateX(5px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contact-grid {
+    text-align: center;
+  }
+  .contact-info {
+    text-align: center;
+  }
+}
+
+@keyframes slideUpFade {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.contact-form,
+.contact-info {
+  animation: slideUpFade 0.9s ease forwards;
+  opacity: 0;
+}
+
+.contact-info { animation-delay: 0.2s; }
+
+.contact-form:hover {
+  box-shadow: 0px 0px 25px rgba(125, 42, 232, 0.25);
+  transition: 0.3s ease;
+}
+
+.contact-info:hover {
+  box-shadow: 0px 0px 25px rgba(75, 115, 255, 0.25);
+  transition: 0.3s ease;
+}
+
+/* Floating particles */
+.contact-container .particle {
+  position: absolute;
+  background: rgba(255,255,255,0.15);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  animation: contactParticles 10s infinite ease-in-out;
+}
+
+@keyframes contactParticles {
+  0% { transform: translateY(0px); opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { transform: translateY(-80px); opacity: 0.3; }
+}

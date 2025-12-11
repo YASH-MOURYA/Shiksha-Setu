@@ -3,7 +3,9 @@ import Home from "./Pages/Home";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import Courses from "./Pages/Courses";
-import Navbar from "./Components/Navbar";   
+import Navbar from "./Components/Navbar";
+import Contact from "./Pages/Contact";
+import Articles from "./Pages/Articles";   
 
 function App() {
   return (
@@ -16,7 +18,9 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/courses" element={<Courses />} />
-        </Routes>
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/articles" element={<Articles />} />
+          </Routes>
 
       </BrowserRouter>
     </>
